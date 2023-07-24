@@ -1,8 +1,7 @@
 # AutoCompleteText
 
 # Awesome Auto-Complete Text
-
-![Favicon](/static/icon.png) <!-- Add your favicon here -->
+![Favicon]([/static/icon.png](https://github.com/jahangirzadanurlan/AutoCompleteText/assets/103985861/746075a4-4ee1-4c86-a281-46c015226dbf)) <!-- Add your favicon here -->
 
 This project contains a web application called "Awesome Auto-Complete Text" that provides an auto-complete feature using the Trie data structure.
 
