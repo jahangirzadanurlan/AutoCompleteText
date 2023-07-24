@@ -1,7 +1,6 @@
 # AutoCompleteText
 
 # Awesome Auto-Complete Text
-![Favicon]([/static/icon.png](https://github.com/jahangirzadanurlan/AutoCompleteText/assets/103985861/746075a4-4ee1-4c86-a281-46c015226dbf)) <!-- Add your favicon here -->
 
 This project contains a web application called "Awesome Auto-Complete Text" that provides an auto-complete feature using the Trie data structure.
 
@@ -18,4 +17,8 @@ A Trie (also known as Prefix Tree) is a tree-like data structure that efficientl
 - Auto-complete feature powered by the Trie data structure
 - Real-time AJAX calls
 - User-friendly interface
+
+<img width="960" alt="Screenshot 2023-07-24 193645" src="https://github.com/jahangirzadanurlan/AutoCompleteText/assets/103985861/7928704a-ea54-4c39-ab5e-dab524e89266">
+
+<img width="960" alt="Screenshot 2023-07-24 193714" src="https://github.com/jahangirzadanurlan/AutoCompleteText/assets/103985861/e3c8065c-6c34-4207-ba66-6217542b92a4">
 
