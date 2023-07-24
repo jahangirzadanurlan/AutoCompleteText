@@ -4,7 +4,7 @@
     <title>Awesome Auto-Complete Text</title>
     <link rel="icon" type="image/png" href="/static/icon.png">
     <link rel="icon" type="image/x-icon" href="/static/icon.ico">
-    <link rel="icon" type="image/x-icon" href="C:\Users\cahan\IdeaProjects\AutoComplete_2\src\main\resources\static\icon.ico">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -19,19 +19,31 @@
 
         .container {
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 50px;
+            border-radius: 20px;
             background-color: #fff;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 350px; /* Sabit genişlik ayarı */
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* Dikey hizalama */
+            justify-content: center; /* Ortalama */
+            align-items: center; /* Ortalama */
         }
 
         h1 {
             color: #3498db;
             margin-bottom: 20px;
+            display: flex; /* Yıldızları dikey hizala */
+            justify-content: center; /* Yıldızları dikey hizala */
+        }
+
+        i {
+            margin: 0 5px; /* Yıldızlar arasındaki boşluk */
         }
 
         #autocompleteInput {
-            width: 300px;
+            width: 100%;
             font-size: 18px;
             padding: 10px;
             border: 2px solid #3498db;
@@ -52,6 +64,7 @@
             }
         }
     </style>
+
 </head>
 <body>
 <div class="container">
@@ -78,7 +91,11 @@
                     }
                 });
             },
-            minLength: 1 // Önerilerin gösterilmeye başlanacağı karakter sayısı
+            minLength: 1, // Önerilerin gösterilmeye başlanacağı karakter sayısı
+            messages: {
+                noResults: '', // Arama sonucunda eşleşen öğe yoksa mesajı kaldır
+                results: function() {} // Önerileri gösterme mesajını kaldır
+            }
         });
     });
 </script>

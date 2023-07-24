@@ -24,7 +24,6 @@ public class AutoComplete2Application {
     public static void main(String[] args) {
         SpringApplication.run(AutoComplete2Application.class, args);
     }
-/*
     @Bean
     public CommandLineRunner initData() {
         return args -> {
@@ -51,5 +50,4 @@ public class AutoComplete2Application {
             wordRepository.save(_word);
         }
     }
- */
 }
