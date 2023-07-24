@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Awesome Auto-Complete Text</title>
+    <link rel="icon" type="image/png" href="/static/icon.png">
+    <link rel="icon" type="image/x-icon" href="/static/icon.ico">
+    <link rel="icon" type="image/x-icon" href="C:\Users\cahan\IdeaProjects\AutoComplete_2\src\main\resources\static\icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        #autocompleteInput {
+            width: 300px;
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+        }
+
+        .loading {
+            display: inline-block;
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1><i class="fas fa-star"></i> Auto-Complete Text <i class="fas fa-star"></i></h1>
+    <input type="text" id="autocompleteInput" th:attr="placeholder='🔍 Type to search...'">
+    <span class="loading" style="margin-left: 10px; display: none;"><i class="fas fa-spinner fa-spin"></i></span>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+        // Auto-complete için AJAX çağrısı
+        $("#autocompleteInput").autocomplete({
+            source: function(request, response) {
+                $(".loading").show();
+                $.ajax({
+                    url: "/autocomplete",
+                    type: "GET",
+                    data: { term: request.term },
+                    success: function(data) {
+                        $(".loading").hide();
+                        response(data);
+                    }
+                });
+            },
+            minLength: 1 // Önerilerin gösterilmeye başlanacağı karakter sayısı
+        });
+    });
+</script>
+</body>
+</html>
