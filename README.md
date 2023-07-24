@@ -23,3 +23,6 @@ A Trie (also known as Prefix Tree) is a tree-like data structure that efficientl
 
 <img width="960" alt="Screenshot 2023-07-24 193714" src="https://github.com/jahangirzadanurlan/AutoCompleteText/assets/103985861/47326712-8576-4dac-b535-a836d43ab877">
 
+
+![Treedatastructure](https://github.com/jahangirzadanurlan/AutoCompleteText/assets/103985861/59db2980-81aa-4b64-9480-c3f519046a51)
+
