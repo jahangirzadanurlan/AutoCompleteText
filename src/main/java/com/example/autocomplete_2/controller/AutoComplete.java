@@ -31,7 +31,7 @@ public class AutoComplete {
     @GetMapping("/autocomplete")
     @ResponseBody
     public List<String> autoComplete(@RequestParam("term") String term) {
-        // Kullanıcıdan gelen terime göre Trie yapısını kullanarak önerileri alın
+        // Get suggestions using Trie structure based on term from user
         return trie.search(term.toLowerCase());
     }
 }
